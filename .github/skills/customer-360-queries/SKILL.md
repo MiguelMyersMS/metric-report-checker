@@ -5,7 +5,7 @@ description: "DAX query patterns for the Azure Data Insights Power BI semantic m
 
 # Customer 360 Queries
 
-DAX query patterns and metric definitions for the Azure Data Insights Power BI semantic model. This skill provides the `@customer-360` agent with ready-to-use query templates, growth calculation patterns, and output formatting guidance.
+DAX query patterns and metric definitions for the Azure Data Insights Power BI semantic model. This skill provides ready-to-use query templates, growth calculation patterns, and output formatting guidance. Used by `@engagement-orchestrator` and any agent querying `powerbi-remote` MCP.
 
 ## Semantic Model Reference
 

@@ -14,7 +14,7 @@ Load this skill when:
 - Processing engagement content into TODO lists
 - Updating a customer's `TODO.md` file
 - The `@engagement-orchestrator` is completing Step 7 (Update Customer Files)
-- The `@workiq-assistant` is summarizing M365 content with action items
+- Summarizing M365 content with action items via `workiq` MCP
 
 ## Output Format
 

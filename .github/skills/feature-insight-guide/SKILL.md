@@ -22,10 +22,10 @@ Feature insights are built from four primary evidence sources, in order of relia
 
 | Source | Data Location | Queried By | Confidence |
 |--------|--------------|------------|------------|
-| **CAT CRM** (issue reports, escalations) | Dataverse (`pbicat.crm.dynamics.com`) | `@dataverse-analyst` | High — verified, tracked issues |
-| **Enterprise Voice** (interviews) | Dataverse (`pbicat_interaction` entity) | `@dataverse-analyst` | High — direct customer voice |
-| **NPS / CSAT** (verbatim feedback) | Dataverse (`pbicat_feedback` entity) | `@dataverse-analyst` | Medium — unstructured, volume-based |
-| **In-product feedback** | Dataverse (`pbicat_feedback` entity) | `@dataverse-analyst` | Medium — self-selected respondents |
+| **CAT CRM** (issue reports, escalations) | Dataverse (`pbicat.crm.dynamics.com`) | `dataverse` MCP | High — verified, tracked issues |
+| **Enterprise Voice** (interviews) | Dataverse (`pbicat_interaction` entity) | `dataverse` MCP | High — direct customer voice |
+| **NPS / CSAT** (verbatim feedback) | Dataverse (`pbicat_feedback` entity) | `dataverse` MCP | Medium — unstructured, volume-based |
+| **In-product feedback** | Dataverse (`pbicat_feedback` entity) | `dataverse` MCP | Medium — self-selected respondents |
 
 ### Enterprise Voice Recordings
 
@@ -45,7 +45,7 @@ Reference this link in the Enterprise Voice section of the output document.
 
 ### Step 2: Gather Evidence
 
-Delegate to `@dataverse-analyst` with specific requests:
+Query `dataverse` MCP with specific requests (load `dataverse-queries` skill first):
 
 **Request 1 — CAT CRM Issues**:
 ```
@@ -68,7 +68,7 @@ Query pbicat_feedback by product area or keyword.
 Include: source type, verbatim text, score, customer, date.
 ```
 
-Optionally delegate to `@customer-360` for adoption metrics:
+Optionally query `powerbi-remote` MCP for adoption metrics (load `customer-360-queries` skill first):
 ```
 Retrieve workload-level adoption metrics that map to "{feature_name}".
 ```

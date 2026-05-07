@@ -1,6 +1,5 @@
 ---
 description: "Morning standup — live project status, blockers, and follow-up suggestions from ADO."
-agent: "ops-commander"
 ---
 
 Run my daily standup check-in. Do this in order:

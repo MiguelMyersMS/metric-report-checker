@@ -5,7 +5,7 @@ description: "Dataverse query patterns for the PBI CAT CRM org. Contains entity 
 
 # Dataverse Queries
 
-Entity schemas, query patterns, and operational rules for querying the PBI CAT Dataverse CRM. This skill provides the `@dataverse-analyst` agent with entity/field references, query templates, and rate-limiting guidance.
+Entity schemas, query patterns, and operational rules for querying the PBI CAT Dataverse CRM. This skill provides entity/field references, query templates, and rate-limiting guidance. Used by `@engagement-orchestrator` and any agent querying `dataverse` MCP.
 
 ## Dataverse Connection
 
