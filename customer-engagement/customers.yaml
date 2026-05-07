@@ -1,0 +1,10 @@
+customers:
+  - name: Wells Fargo
+    folder: Wells Fargo
+    account: WELLS FARGO & COMPANY
+    tpid: "642492"
+    industry: Banking
+    geography: United States
+    keywords:
+      - Wells Fargo
+      - Wells Fargo & Company

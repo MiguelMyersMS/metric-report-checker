@@ -1,0 +1,10 @@
+features:
+  - name: API Throttling
+    slug: api-throttling
+    keywords:
+      - API throttling
+      - API rate limit
+    workload: Cross-workload
+    description: API rate limits and throttling blocking enterprise-scale automation and governance
+    created: '2026-03-28'
+    last_updated: '2026-03-28'
