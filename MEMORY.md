@@ -19,6 +19,11 @@
 - Weekly sprint cadence with self-assignment
 - PBIP format for version-controlling Power BI reports
 
+## MCP Endpoints
+- My-Ops-Hub + global: `msitapi.fabric.microsoft.com` (MSIT ring — internal data)
+- Lyra-app: `api.fabric.microsoft.com` (production ring)
+- These are intentionally different — do not unify
+
 ## Things To Watch
 - Customer engagement system is set up but unused — revisit when needed
 - ppt-creator merged into pptx skill (2025-05-07) — single skill for all presentation work

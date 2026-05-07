@@ -48,8 +48,10 @@ Requirements → Data modeling → Eng alignment → Report development → Vali
 
 ## MCP Servers
 - **Azure DevOps:** `mcp.dev.azure.com/powerbi` — work items, sprints, backlog
-- **Power BI:** `msitapi.fabric.microsoft.com` — semantic model queries
+- **Power BI:** `msitapi.fabric.microsoft.com` — semantic model queries (MSIT ring — internal data)
 - **WorkIQ, Learn, Dataverse:** workspace-level (see `.vscode/mcp.json`)
+
+> **Note:** Lyra-app uses `api.fabric.microsoft.com` (production ring) — different endpoint, intentional. Do not unify.
 
 ## Operating Principles
 - ADO is the single source of truth — not mental tracking.
