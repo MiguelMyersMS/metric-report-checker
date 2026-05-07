@@ -21,5 +21,5 @@
 
 ## Things To Watch
 - Customer engagement system is set up but unused — revisit when needed
-- ppt-creator and pptx skills overlap — merge when next used
+- ppt-creator merged into pptx skill (2025-05-07) — single skill for all presentation work
 - 11 agents is too many — consolidation planned (target ~6)

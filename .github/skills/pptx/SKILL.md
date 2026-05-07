@@ -1,6 +1,6 @@
 ---
 name: pptx
-description: "Use this skill any time a .pptx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or extracting text from any .pptx file (even if the extracted content will be used elsewhere, like in an email or summary); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates, layouts, speaker notes, or comments. Trigger whenever the user mentions \"deck,\" \"slides,\" \"presentation,\" or references a .pptx filename, regardless of what they plan to do with the content afterward. If a .pptx file needs to be opened, created, or touched, use this skill."
+description: "Use this skill any time a .pptx file is involved — as input, output, or both. Covers the full pipeline: content strategy (Pyramid Principle, storytelling, rubric), chart generation, and file creation/editing. Trigger on: deck, slides, presentation, .pptx, pitch, keynote."
 license: Proprietary. LICENSE.txt has complete terms
 ---
 
@@ -10,9 +10,11 @@ license: Proprietary. LICENSE.txt has complete terms
 
 | Task | Guide |
 |------|-------|
+| Create a deck from a topic | See **Content Strategy** below, then create with [pptxgenjs.md](pptxgenjs.md) |
 | Read/analyze content | `python -m markitdown presentation.pptx` |
 | Edit or create from template | Read [editing.md](editing.md) |
-| Create from scratch | Read [pptxgenjs.md](pptxgenjs.md) |
+| Create from scratch (no strategy) | Read [pptxgenjs.md](pptxgenjs.md) |
+| Generate charts from data | `python scripts/chartkit.py` |
 
 ---
 
@@ -45,6 +47,22 @@ python scripts/office/unpack.py presentation.pptx unpacked/
 **Read [pptxgenjs.md](pptxgenjs.md) for full details.**
 
 Use when no template or reference presentation is available.
+
+---
+
+## Content Strategy (from topic to slides)
+
+Use this workflow when creating a deck from a topic or brief (not just editing an existing file).
+
+1. **Gather Intent**: If critical info is missing, ask the 10 questions in [references/INTAKE.md](references/INTAKE.md). Use safe defaults if the user doesn't respond.
+2. **Structure the Story**: Apply the Pyramid Principle — one conclusion → 3-5 reasons → evidence. Use assertion-style headings (complete sentences). Templates in [references/TEMPLATES.md](references/TEMPLATES.md).
+3. **Choose Charts**: Use [references/VIS-GUIDE.md](references/VIS-GUIDE.md) for chart selection. If data is provided, run `scripts/chartkit.py` to generate PNGs.
+4. **Layout & Style**: Follow [references/STYLE-GUIDE.md](references/STYLE-GUIDE.md) for fonts, spacing, contrast, WCAG AA compliance.
+5. **Speaker Notes**: 45-60 seconds per slide — opening → assertion → evidence → transition.
+6. **Self-Check**: Run [references/CHECKLIST.md](references/CHECKLIST.md), score with [references/RUBRIC.md](references/RUBRIC.md). If < 75, refine weakest 3 items (max 2 iterations).
+7. **Build**: Use [pptxgenjs.md](pptxgenjs.md) to generate the .pptx file.
+
+Full workflow details: [references/WORKFLOW.md](references/WORKFLOW.md)
 
 ---
 
