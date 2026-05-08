@@ -1,0 +1,73 @@
+# Metric Registry Template
+# Use this file to define how each metric should be interpreted and checked.
+
+metrics:
+  - metric_id: example_metric_id
+    display_name: Example Metric Name
+    description: Short explanation of what this metric measures.
+    business_owner: Team or person responsible for this metric.
+    source_system: Dashboard, database, API, spreadsheet, or report name.
+    source_location: Link, query name, dashboard path, or file location.
+
+    # Metric behavior
+    aggregation_type: count # count | sum | average | ratio | rate | cumulative | snapshot
+    grain: daily # hourly | daily | weekly | monthly | real_time
+    unit: users # users | sessions | dollars | percent | events | records | other
+    is_cumulative: false
+    can_be_zero: true
+    can_be_negative: false
+    natural_min: 0
+    natural_max:
+
+    # Data freshness
+    expected_refresh_cadence: daily
+    expected_refresh_time: "09:00"
+    timezone: "UTC"
+    freshness_sla_hours: 24
+
+    # Historical comparison rules
+    comparison_windows:
+      - previous_period
+      - same_weekday_last_week
+      - trailing_7_day_median
+      - trailing_28_day_median
+
+    expected_seasonality: weekly # none | hourly | daily | weekly | monthly
+    normal_volatility: medium # low | medium | high
+    alert_sensitivity: medium # low | medium | high
+
+    # Threshold examples
+    warning_threshold_percent_change: 20
+    critical_threshold_percent_change: 40
+    robust_z_warning_threshold: 2.5
+    robust_z_critical_threshold: 3.5
+    flatline_period_limit: 3
+
+    # Data completeness rules
+    requires_complete_date_buckets: true
+    allow_partial_current_period: true
+    minimum_expected_records:
+
+    # Context and dependencies
+    known_context_sources:
+      - release_notes
+      - incident_reports
+      - experiment_logs
+      - backend_change_logs
+
+    dependent_metrics:
+      - related_metric_id_1
+      - related_metric_id_2
+
+    # Alerting
+    criticality: medium # low | medium | high
+    alert_recipients:
+      - team@example.com
+
+    # Human guidance
+    expected_behavior_notes: >
+      Describe anything special about this metric.
+      For example: this metric is expected to be flat on weekends,
+      reset monthly, or spike during campaigns.
+
+    runbook_url:
