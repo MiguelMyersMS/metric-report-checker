@@ -1,5 +1,5 @@
 ---
-description: "Morning standup — live project status, blockers, and follow-up suggestions from ADO."
+description: "Quick morning standup — ADO-only status check. For a full cross-source review (ADO + Email + Teams + drafts), use /daily-review instead."
 ---
 
 Run my daily standup check-in. Do this in order:

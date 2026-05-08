@@ -4,6 +4,45 @@
 
 ---
 
+## May 7, 2026 — ADO Review: Timeline Shifted to Mid-May
+
+### Email Findings (May 5-7)
+1. **"Helix Platform Reliability Update - April 2026"** (May 6) — Kiefer Sheldon sent monthly update: 11 product IcMs in April (+38% MoM), all resolved. Orchestration success rate 96.61% across ~6k jobs. **Semantic model performance regressed** (P90 latency +30.3% MoM). Forward risk: capacity pressure as LLM/agent usage scales.
+2. **"Re: Miguel:Nate 1-1s"** (May 6) — Status to Nate: LT Reliability shifted to mid-May, all DW follow-ups deferred. Plan: use Databases Strategy as case study for Miso 1:1.
+
+### Teams Findings (May 6-7) — **Live reliability incidents**
+- **May 6 — Helix Data Triage:** Memory allocation limit hit. Justin Martin acknowledged team-caused. Sonal engaged despite OOF.
+- **May 7 — Helix Data Semantic Model Alerts:** **Severe** — query response times 8-65x slower, P90 latencies >100s. Joe Muziki hit it (PBI Desktop stuck). Justin escalating to Arun & Nico (hit during a demo). Eventually stabilized.
+- **Relevance to LT Reliability project:** These incidents are live examples of the reliability gaps this project aims to address. Use as talking points in Miso 1:1.
+
+### ADO Comment Review (from May 5-6 updates)
+- **LT Reliability meeting moved** from May 5 to **mid-May** — Sonal's team needs a few more weeks
+- **Stakeholder clarification from Sonal:**
+  - **Shemesh Hamaoui** = hard partner (central reliability owner, works with each product team)
+  - **Miso Cilimidžić** = PM on product side (responsible for metric changes, defines what's most important for Epic/CSX)
+- **Strategy:** Use Databases Strategy project as a case study to build trust with Miso before the rescheduled meeting
+- **All DW follow-ups deferred to mid-May:** MAU drop (#2087032), table access, connector gaps
+
+### Outstanding Actions
+
+| # | Action | Owner | Deadline | Priority |
+|---|--------|-------|----------|----------|
+| 1 | ~~Schedule meeting with Miso Cilimidžić~~ — **Scheduled May 28, 12 PM** | Miguel | May 28 | ✅ Done |
+| 2 | Verify access to 6 reliability tables (deferred) | Miguel | Mid-May | MEDIUM |
+| 3 | Follow up on DW connector telemetry drop (IcM-767077695) after Miso 1:1 | Miguel | Mid-May | MEDIUM |
+| 4 | Investigate service + agentic event coverage gaps (#2087033) | Miguel | After Miso meeting | LOW (deferred) |
+| 5 | Build DW reliability view from semantic model (#2087034) | Miguel | After access confirmed | LOW (deferred) |
+
+### ADO State Check
+- Feature #2087007 — New (correct, not started yet)
+- All 4 tasks (#2087032-35) — New (correct, all deferred to mid-May)
+- No comments from external stakeholders — all self-authored status notes
+
+### Email/Teams Status
+- WorkIQ authentication broken — could not pull emails or Teams chats. Need to re-authenticate.
+
+---
+
 ## September 3–8, 2025 — CSX Reliability Dashboard Sprint (Original Working Group Chat)
 
 ### Source

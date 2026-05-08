@@ -1,8 +1,8 @@
 # Project Tracker
 
 > Persistent view of all features and tasks across projects. Updated after each ADO action.
-> Last updated: **May 4, 2026**
-> Last review: **May 4, 2026** — Shireesh early access shared; NPS bug fixed; UX fixes done; Cosmos backfill in progress; DUM unit consistency issue identified
+> Last updated: **May 7, 2026**
+> Last review: **May 7, 2026** — #2079558 closed (flat-column abandoned, DAX measures correct); SQL parquet: Dhirendra parquet preferred path; Postgres DUM converting to PB; DW telemetry deferred to mid-May
 
 ---
 
@@ -28,12 +28,13 @@
 |----|------|-------|-------|----------|--------|
 | 2079520 | Deliver remaining parquet metrics (Migrations, Arc, Fabric CU/NPS) | 🔵 Active | Joe Muziki | ⚠️ Overdue (May 1) | SQL 🔷 |
 | 2079521 | Finalize metric definitions & NPS bug fix | ✅ Closed | Miguel | Done May 4 | SQL 🔷 |
-| 2079522 | Complete metric documentation | 🔵 Active | Danyal | May 5 | Postgres 🟩 |
+| 2079522 | Complete metric documentation | 🔵 Active | Danyal | In progress; DUM converting to PB | Postgres 🟩 |
 | 2079523 | Validate dashboard data & resolve UX feedback | ✅ Closed | Miguel | Done May 4 | Postgres 🟩 |
 | 2079524 | Deliver split Fabric metric files (native vs. mirroring) | 🔵 Active | Kalpana | Backfilling | Cosmos 🟠 |
 | 2079525 | Finalize metric renames & Cosmos100 TPID backfill | 🔵 Active | Kalpana | Backfilling | Cosmos 🟠 |
+| **2098124** | **Investigate Active Customers duplicate (60K vs 81K)** | 🔵 Active | Mohammad | P1 — investigating | Cosmos 🟠 |
 | 2079526 | Prepare Shireesh early access package | ✅ Closed | Miguel | Done May 4 | All 🗖 |
-| 2079558 | Revert Display Metric Name, Description & Importance columns from FabricDatabases | 🔵 Active | Jacob Knightley | TBD | All 🗖 |
+| 2079558 | Revert Display Metric Name, Description & Importance columns from FabricDatabases | ✅ Closed | Sanjana Chauhan | Done May 5 | All 🗖 |
 
 ### Key Milestones
 
@@ -79,7 +80,7 @@
 
 | ID | Task | State | Owner | Due |
 |----|------|-------|-------|-----|
-| 2087032 | Resolve DW connector telemetry drop (IcM-767077695) | ⚪ New | Miguel | May 5 |
+| 2087032 | Resolve DW connector telemetry drop (IcM-767077695) | ⚪ New | Miguel | Mid-May (deferred) |
 | 2087033 | Investigate service + agentic event coverage gaps | ⚪ New | Miguel | May 9 |
 | 2087034 | Build DW reliability view from semantic model | ⚪ New | Miguel | ~May 8 |
 | 2087035 | Document connector metric definitions | ⚪ New | Miguel | TBD |

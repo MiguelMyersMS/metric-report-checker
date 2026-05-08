@@ -36,13 +36,24 @@ Build a dashboard with key metrics for each PLG priority area, plus placeholders
 | Stakeholders | TBD |
 
 ## Open Questions
-<!-- Things to figure out as context comes in -->
+<!-- Things to figure out as you learn who the contacts are -->
 - Which metrics already have data sources vs. need to be built?
 - Which related features (#2062347, #2062244, etc.) cover which metrics?
 - Timeline / sprint plan for delivery?
 - Who owns data pipelines for each priority area?
+- Note: Related feature IDs in ADO may be stale/repurposed (e.g., #2062347 now "Osmos support brief", #2062253 now "RPI: Iceberg metadata"). Verify correct child items under #2069070.
 
 ## Decisions Log
 | Date | Decision | Context |
 |------|----------|---------|
+| 2026-05-07 | ADO review: Feature assigned to May iteration, Nate last changed it May 5. No comments yet. No child tasks created. | Need to break down into tasks |
 | 2026-05-05 | Project received and tracked | Feature #2069070, assigned May iteration |
+
+## Actions (May 7, 2026)
+
+| # | Action | Owner | Priority |
+|---|--------|-------|----------|
+| 1 | Create child tasks under #2069070 (at minimum: data source inventory, stakeholder identification, sprint plan) | Miguel | HIGH |
+| 2 | Verify which "related features" are actually related (some IDs appear repurposed in ADO) | Miguel | MEDIUM |
+| 3 | Schedule intro with data contacts for each priority area | Miguel | MEDIUM |
+| 4 | Clarify scope with Nate — is this a new build or integrating existing reports? | Miguel | HIGH |

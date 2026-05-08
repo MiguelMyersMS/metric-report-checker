@@ -7,6 +7,22 @@
 ### LT Reliability Metrics
 ---
 
+## 2026-05-07 — Shemesh Hamaoui: Intro 1:1 scheduled
+- **Topic**: Introduction — get to know each other, understand his expectations, show how we work (DB Strategy as example)
+- **Context**: Sonal identified Shemesh as the central reliability owner (the "how"). This is the first meeting. Goal is relationship-building and alignment on shared reliability objectives.
+- **Action needed**: Review [talking points](../drafts/shemesh-intro-1on1-2026-05-07.draft.md) before the meeting.
+- **Due date**: 2026-05-28 (10 AM)
+- **Status**: Scheduled
+- **Related project**: brain/projects/lt-reliability-metrics/
+
+## 2026-05-07 — Miso Cilimidžić: 1:1 scheduled
+- **Topic**: Discuss DW reliability metrics, align on Phase 1 scope, build collaborative relationship
+- **Context**: Miso owns the "what" for Epic/CSX reliability. Meeting prep includes May 6-7 incident data, April reliability report, and Phase 1 scope proposal.
+- **Action needed**: Review [talking points](../drafts/miso-1on1-talking-points-2026-05-07.draft.md) before the meeting.
+- **Due date**: 2026-05-28 (12 PM)
+- **Status**: Scheduled
+- **Related project**: brain/projects/lt-reliability-metrics/
+
 ## 2026-04-29 — Follow-up with Sonal Bhargava (Reliability Metrics)
 - **Topic**: Meeting threads and recordings from previous reliability discussions
 - **Context**: Sonal shared all available materials: knowledge transfer call, CSX Teams chat history, reliability stakeholder doc, Connector Report Sync recording. Miguel will now record all future conversations about this project for ongoing documentation.
@@ -35,6 +51,15 @@
 ---
 ### Databases Strategy Metrics
 ---
+
+## 2026-05-07 — Mohammad Al Aqrabawi: Active Customers discrepancy investigation
+- **Topic**: Report shows ~81K Active Customers but Kalpana's parquet/query returns ~60-70K
+- **Context**: Mohammad identified possible **duplicates in the consolidated model**. Miguel confirmed report filters need adjustment (`MetricName = 'Active Customers'`). Quick call with Kalpana likely happened May 7. Mohammad committed to investigating on the data side. IcM still open with Helix team.
+- **Action needed**: Follow up with Mohammad on findings. Apply correct filters to report. Close the gap before May 14 Shireesh review.
+- **Due date**: Before May 14
+- **Status**: In Progress — Mohammad investigating, Miguel checking filters
+- **ADO**: #2079524
+- **Related project**: brain/projects/databases-strategy/
 
 ## 2026-05-04 — Danyal Bukhari: Postgres metric definitions
 - **Topic**: Send Postgres metric definitions, descriptions, and strategic relevance

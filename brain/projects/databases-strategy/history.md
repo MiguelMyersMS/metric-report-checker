@@ -4,6 +4,58 @@
 
 ---
 
+## May 7, 2026 — ADO Review: State Corrections + Outstanding Actions
+
+### Email Findings (May 5-7)
+1. **"Re: Review the latest on Data Dashboards"** (May 5) — Miguel sent a critical alignment email to Nate, Shireesh, Joe, Danyal, Kalpana, Dhirendra, Krishna, Sonal, Arza Maimon, and others. Confirms Shireesh has early access. Flags missing parquets, definitions, and data discrepancies. Assigns ownership by pillar.
+2. **"Re: Miguel:Nate 1-1s"** (May 6) — Comprehensive status update to Nate covering Databases Strategy (at risk: SQL parquet + Cosmos dependencies), LT Reliability (shifted to mid-May), and PLG (not started). Includes action table with owners.
+
+### Teams Findings (May 6-7)
+- **May 6 — Helix Data Triage chat:** Memory allocation error hit ("maximum allowable memory allocation for your tier"). Justin Martin acknowledged team-caused. Nate and Sonal both present in thread.
+- **May 7 — Helix Data Semantic Model Alerts:** Major performance degradation — P90 latencies 8-65x slower than normal. Joe Muziki reported PBI Desktop stuck idling. Chris Hamill confirmed recovery. **Justin escalating to Arun & Nico** (demo was impacted). Jacob Knightley, Nate, Sonal all present.
+- Impact: These incidents directly affect the Databases Strategy dashboard reliability and exec-facing demos.
+
+### Teams: Active Customers Discrepancy Deep-Dive (May 6-7) — KEY
+**"Cosmos, data model" group chat** (May 6):
+- **Kalpana**: Backfill complete, parquet files look clean (~60K avg). But report shows ~80K at spike, ~72K non-spike. IcM open with Helix. Dev (Mohammad Al Aqrabawi) awaiting PBI report access.
+- **Miguel** asked who needs access → Kalpana confirmed `malaqrabawi@microsoft.com`
+
+**1:1 with Mohammad Al Aqrabawi** (May 7):
+- Mohammad asked if Miguel owns the report — someone asking about the numbers
+- Kalpana's query returned 70K but report shows ~81K
+- Miguel explained the parquet → consolidated table pipeline
+- **Mohammad's hypothesis: possible duplicates in the model**
+- Mohammad committed to investigating
+
+**3-way chat: Miguel + Mohammad + Kalpana** (May 7):
+- Mohammad asked Miguel to check report filters (apply `MetricName = 'Active Customers'`)
+- Miguel confirmed he can see where the problem is — **needs special filters to match their numbers**
+- Miguel asked Kalpana for a quick call to figure out what filters to apply
+- **Kalpana agreed** — call likely happened
+
+**Root cause direction:** Likely duplicate rows in the consolidated model or missing filter conditions. Mohammad investigating on the data side; Miguel checking report filters.
+
+### ADO Sync (Review)
+- **#2079558 (Revert columns)** → **Closed** (May 5). Sanjana confirmed flat-column approach doesn't work (context-dependent MetricName). DAX measures are the correct path. PR #964529 abandoned. Reassigned to Sanjana Chauhan.
+- **#2079498, #2079522, #2079524, #2079525** — Were stuck in "New" state in ADO while actively worked. Fixed → **Active**.
+- **Feature #2079452** — ADO shows "New" (not "Active" as tracker had). Left as-is since children are Active.
+
+### Outstanding Blockers & Actions
+
+| # | Action | Owner | Deadline | Priority |
+|---|--------|-------|----------|----------|
+| 1 | Follow up with Joe/Dhirendra on parquet delivery path — confirm Option 3 (Dhirendra creates files) | Miguel → Joe/Dhirendra | This week | HIGH |
+| 2 | Grant PBI report access to Cosmos dev (for Active Customers discrepancy investigation) | Miguel | ASAP | HIGH |
+| 3 | Check if Krishna completed PB conversion (pipeline fix first, then Decimal type change) | Miguel → Krishna | Check May 8 | MEDIUM |
+| 4 | Confirm Danyal sent Postgres definitions — if not, follow up | Miguel → Danyal | Overdue (was May 5) | HIGH |
+| 5 | Coordinate May 14 formal review with Arza Maimon | Miguel → Arza | Before May 12 | MEDIUM |
+| 6 | Track IcM with Helix team on Active Customers discrepancy (60K parquet vs 80K report) | Miguel | Mid-May | MEDIUM |
+
+### Email/Teams Status
+- WorkIQ authentication broken — could not pull emails or Teams chats. Need to re-authenticate interactively (`npx -y @microsoft/workiq ask` in terminal, complete browser login).
+
+---
+
 ## May 6, 2026 — Postgres Definitions In Progress + DUM Unit Conversion to PB
 
 ### Danyal & Krishna Update (May 6)
