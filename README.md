@@ -1,38 +1,85 @@
-# metric-report-checker
+# Analytical Metric Report Checker
 
-An intelligent agent/skill that reviews analytical metric reports at the moment they are requested and determines whether each key metric is trustworthy, suspicious, broken, stale, or behaving as expected.
+A reusable resource for reviewing analytical metric reports and identifying whether metrics are reliable, suspicious, stale, incomplete, or broken before teams make decisions based on them.
 
-## What It Does
+## What this resource does
 
-- Evaluates metric health across analytical reports at request time
-- Classifies each metric as: **trustworthy**, **suspicious**, **broken**, **stale**, or **expected**
-- Built on GitHub Copilot agents, skills, and MCP server integrations
-- Designed for PM workflows in Azure DevOps + Power BI environments
+The Analytical Metric Report Checker helps teams detect issues such as:
 
-## Architecture
+- Blank, null, or missing metric values
+- Data retrieval errors
+- Stale or delayed data
+- Unexpected zeros
+- Sudden spikes or drops
+- Suspicious flatlines
+- Cumulative metrics that decrease unexpectedly
+- Summed metrics with missing underlying dates
+- Metrics that behave differently from historical trends
+- Ratios or percentages outside valid ranges
+- Anomalies that may be explained by recent backend, tracking, product, or business changes
 
-| Folder | Purpose |
-|--------|---------|
-| `brain/` | AI context, project routing rules, and project definitions |
-| `.github/agents/` | Custom Copilot agents for specialized roles |
-| `.github/skills/` | On-demand workflow skills with templates |
-| `.github/prompts/` | Quick-task prompt templates |
-| `.github/instructions/` | File-specific guidance for agents |
-| `data/` | Tracked follow-ups, action items, metrics |
+## Who this is for
 
-## Getting Started
+This resource is useful for:
 
-1. Clone the repo
-2. Open in VS Code with GitHub Copilot enabled
-3. Configure MCP servers in `.vscode/mcp.json` for your environment
-4. Use `/daily-review` or other prompt templates to trigger workflows
+- Data analysts
+- Product managers
+- UI/UX designers reviewing dashboards
+- Growth teams
+- Engineering teams
+- Leadership teams
+- Anyone responsible for interpreting metrics or reporting business performance
 
-## Requirements
+## Project structure
 
-- VS Code with GitHub Copilot (agent mode)
-- Azure DevOps MCP server access
-- Power BI / Fabric MCP server access (optional)
+```text
+metric-report-checker/
+  README.md
+  .github/
+    copilot-instructions.md
+    prompts/
+      metric-report-checker.prompt.md
+  templates/
+    metric-registry-template.yaml
+    anomaly-report-template.md
+  examples/
+    sample-metrics.csv
+    sample-output.md
+  docs/
+    project-brief.md
+```
+
+## How to use this resource
+
+1. Define the metrics that matter using the metric registry template.
+2. Use the metric checker prompt to review a dashboard, report, CSV, exported data, or metric summary.
+3. Classify each metric as Healthy, Warning, Critical, Expected anomaly, or Needs review.
+4. Document the findings using the anomaly report template.
+5. Improve the rules over time based on confirmed false positives, expected changes, and team feedback.
+
+## Status categories
+
+| Status | Meaning |
+|---|---|
+| Healthy | The metric appears reliable and within expected behavior. |
+| Warning | The metric is unusual but not clearly broken. |
+| Critical | The metric appears broken, missing, stale, or highly suspicious. |
+| Expected anomaly | The metric looks unusual but appears explainable by known context. |
+| Needs review | There is not enough information to confidently classify the metric. |
+
+## Current status
+
+This project is in early development.
+
+The first version includes:
+
+- Project brief
+- Metric registry template
+- Anomaly report template
+- GitHub Copilot instructions
+- Reusable metric checker prompt
+- Example input and output files
 
 ## License
 
-[MIT](LICENSE)
+MIT License
