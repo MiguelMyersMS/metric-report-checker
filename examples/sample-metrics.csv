@@ -1,0 +1,7 @@
+metric_id,metric_name,current_value,previous_value,trailing_7_day_median,trailing_28_day_median,same_weekday_last_week,latest_data_timestamp,expected_refresh_timestamp,is_cumulative,data_completeness_percent,notes
+wau,Weekly Active Users,84200,129000,124500,122800,126900,2026-05-07 09:00,2026-05-08 09:00,false,72,Missing data for May 6 and May 7
+signup_rate,Signup Conversion Rate,2.1,4.8,4.6,4.7,4.9,2026-05-08 09:00,2026-05-08 09:00,false,100,Recent signup backend migration started May 7
+total_accounts,Total Accounts,981200,982100,979500,972000,976000,2026-05-08 09:00,2026-05-08 09:00,true,100,Cumulative metric decreased unexpectedly
+support_tickets,Support Tickets,318,310,305,298,322,2026-05-08 09:00,2026-05-08 09:00,false,100,Normal daily variation
+monthly_revenue,Monthly Revenue,548000,812000,805000,798500,817000,2026-05-08 09:00,2026-05-08 09:00,false,64,Missing several daily revenue buckets
+nps_score,NPS Score,41,41,41,42,41,2026-05-01 09:00,2026-05-08 09:00,false,100,Value has not refreshed this week
