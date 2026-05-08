@@ -4,7 +4,7 @@
 
 | Project | Path | What It Is | Key Tech |
 |---------|------|-----------|----------|
-| My-Ops-Hub | `C:\Users\miguelmyers\My-Ops-Hub` | Personal PM command center — brain, agents, skills, prompts | Copilot agents, MCP, Skills |
+| My-Ops-Hub | `C:\Users\miguelmyers\Workspaces\My-Ops-Hub` | Personal PM command center — brain, agents, skills, prompts | Copilot agents, MCP, Skills |
 | Databases Strategy Metrics | `brain/projects/databases-strategy/` | Executive scorecard for DB strategy execution (SQL, Postgres, NoSQL, Fabric) | Power BI, ADO Feature #2079452 |
 | LT Reliability Metrics | `brain/projects/lt-reliability-metrics/` | Cross-product reliability dashboard for Arun's LT (DW first, then Pipeline/Spark) | Power BI, ADO Feature #2087007, IcM-767077695 |
 | PLG Key Metrics Dashboard | `brain/projects/plg-key-metrics/` | Growth dashboard with key metrics across 7 PLG priority areas (Acq Channels, TTV, Pro Dev, Trials, Expansion, Ecosystem, Partners) | Power BI, ADO Feature #2069070 |
@@ -13,10 +13,10 @@
 
 | Project | Path | What It Is | Key Tech |
 |---------|------|-----------|----------|
-| Bloodwork Dashboard | `C:\Users\miguelmyers\Documents\Projects\bloodwork-dashboard-prototype` | Personal prototype — design system lab for data visualization patterns and tokens | React 18, D3, Vite, Express, Fabric SQL |
-| Lyra App (v1) | `C:\Users\miguelmyers\projects\lyra-app\my-lyra-app` | Lyra private preview — React app visualizing PBI semantic model via DAX + Vega-Lite | React 19, Vite, Tailwind, @powerbi/lyra-* |
-| Lyra App (v2) | `C:\Users\miguelmyers\projects\lyra-app\my-lyra-app-v2` | Fabric Apps template — next-gen reporting surface using fabric.yaml + Vega-Lite | React 19, Vite, Tailwind, @microsoft/fabric-* |
-| Customer 360 (PBIP) | `C:\Users\miguelmyers\projects\Customer 360` | Power BI report in PBIP format — exploring natural-language PBIP editing | Power BI PBIP, PBI MCP |
+| Bloodwork Dashboard | `C:\Users\miguelmyers\Workspaces\bloodwork-dashboard-prototype` | Personal prototype — design system lab for data visualization patterns and tokens | React 18, D3, Vite, Express, Fabric SQL |
+| Lyra App (v1) | `C:\Users\miguelmyers\Workspaces\lyra-app\my-lyra-app` | Lyra private preview — React app visualizing PBI semantic model via DAX + Vega-Lite | React 19, Vite, Tailwind, @powerbi/lyra-* |
+| Lyra App (v2) | `C:\Users\miguelmyers\Workspaces\lyra-app\my-lyra-app-v2` | Fabric Apps template — next-gen reporting surface using fabric.yaml + Vega-Lite | React 19, Vite, Tailwind, @microsoft/fabric-* |
+| Customer 360 (PBIP) | `C:\Users\miguelmyers\Workspaces\Customer 360` | Power BI report in PBIP format — exploring natural-language PBIP editing | Power BI PBIP, PBI MCP |
 
 ## How They Connect
 
